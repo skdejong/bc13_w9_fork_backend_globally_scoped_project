@@ -11,17 +11,18 @@ export const gratitudesRouter = express.Router();
 //   });
 // });
 
-gratitudesRouter.get("/gratitudes", async function (req, res) {
+gratitudesRouter.get("/", async function (req, res) {
   const allGratitudes = await getAllGratitudes();
-  console.log(allGratitudes);
   res.json({
     success: true,
     payload: allGratitudes,
   });
 });
 
-gratitudesRouter.post('/gratitudes', async function (req, res){
-  const newGratitude = await addGratitude(req.body.gratitude);    
+gratitudesRouter.post('/', async function (req, res){
+ 
+  const newGratitude = await addGratitude(req.body.gratitude); 
+  
   res.json({ success: true, payload: newGratitude })
 
 })

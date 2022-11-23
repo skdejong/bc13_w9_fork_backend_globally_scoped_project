@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use("/api", gratitudesRouter);
-app.use("/api", tipsRouter);
+app.use("/api/gratitudes", gratitudesRouter);
+app.use("/api/tips", tipsRouter);
 
 export default app;

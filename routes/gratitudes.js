@@ -1,6 +1,11 @@
 import express from "express";
 //import * as gratitudesModel from "../models/gratitudes.js";
-import { addGratitude, getAllGratitudes, getRandomGratitude } from "../models/gratitudes.js";
+import {
+  addGratitude,
+  deleteGratitude,
+  getAllGratitudes,
+  getRandomGratitude,
+} from "../models/gratitudes.js";
 
 export const gratitudesRouter = express.Router();
 
@@ -19,10 +24,12 @@ gratitudesRouter.get("/", async function (req, res) {
   });
 });
 
-gratitudesRouter.post('/', async function (req, res){
- 
-  const newGratitude = await addGratitude(req.body.gratitude); 
-  
-  res.json({ success: true, payload: newGratitude })
+gratitudesRouter.post("/", async function (req, res) {
+  const newGratitude = await addGratitude(req.body.gratitude);
+  res.json({ success: true, payload: newGratitude });
+});
 
-})
+gratitudesRouter.delete("/:id", async function (req, res) {
+  const deletedGratitude = await deleteGratitude(req.params.id);
+  res.json({ success: true, payload: deletedGratitude });
+});

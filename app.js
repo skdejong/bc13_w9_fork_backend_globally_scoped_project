@@ -24,3 +24,10 @@ app.use(cors());
 app.use("/api/gratitudes", gratitudesRouter);
 
 export default app;
+
+/** 
+ * Note on CORS: 
+ *  We need cross-domain communication enabled in our app so that single-page web apps can communicate with our back end.
+ *  Use the cors middleware to enable cross-domain communication. 
+ *  CORS stands are cross-origin resource sharing, which is the way to let browser apps communicate with apps in other domains.
+ */

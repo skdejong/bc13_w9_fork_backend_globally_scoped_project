@@ -25,7 +25,10 @@ gratitudesRouter.get("/", async function (req, res) {
  */
 gratitudesRouter.post("/", async function (req, res) {
   const newGratitude = await addGratitude(req.body.gratitude);
-  res.json({ success: true, payload: newGratitude });
+  res.json({ 
+    success: true, 
+    payload: newGratitude 
+  });
 });
 
 /**
@@ -34,5 +37,8 @@ gratitudesRouter.post("/", async function (req, res) {
  */
 gratitudesRouter.delete("/:id", async function (req, res) {
   const deletedGratitude = await deleteGratitude(req.params.id);
-  res.json({ success: true, payload: deletedGratitude });
+  res.json({ 
+    success: true, 
+    payload: deletedGratitude 
+  });
 });

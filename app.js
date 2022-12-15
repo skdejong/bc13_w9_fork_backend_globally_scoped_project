@@ -26,6 +26,10 @@ app.use("/api/gratitudes", gratitudesRouter);
 export default app;
 
 /** 
+ * The code you provided is a server file written in JavaScript that is using the Express.js web application framework. The server is set up to handle requests made to the server at specific URI (Uniform Resource Identifier) endpoints. The code is using middleware, in the form of Morgan and CORS, to process requests made to the server. The server is also importing a router file which is used to direct requests to the appropriate route handler.
+
+The server listens for requests on the specified port, and logs a message to the console once it is running. The server is also set up to handle requests made to the /api/gratitudes URI endpoint using the imported router file. This means that when a request is made to this endpoint, it will be handled by the router file and directed to the appropriate route handler.
+ * 
  * Note on CORS: 
  *  We need cross-domain communication enabled in our app so that single-page web apps can communicate with our back end.
  *  Use the cors middleware to enable cross-domain communication. 

@@ -38,3 +38,17 @@ export async function deleteGratitude(id) {
   let deletedQuery = result.rows[0];
   return deletedQuery;
 }
+
+
+/*
+This app is a simple gratitude journal where users can add and delete items from a list. 
+The app uses React for its frontend, and Express for its backend. 
+The app also uses a PostgreSQL database to store the gratitudes. 
+The app includes a few different components, including Gratitude, GratitudeInput, GratitudeList, and Joke. 
+
+Gratitude is the main component and it is responsible for rendering the other components and handling data manipulation. 
+
+GratitudeInput is responsible for capturing the user input and adding it to the gratitude list. 
+
+GratitudeList displays the items on the gratitude list, and Joke is a separate component that fetches a random joke from an external API.
+*/
